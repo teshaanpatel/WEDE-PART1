@@ -67,3 +67,11 @@ Content Creation & Photography	R10 000
 Marketing & Social Media Integration	R10 000
 Maintenance & Technical Support	R10 000
 
+
+References
+- MDN Web Docs: CSS Flexbox (https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout), Media Queries (https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries).
+- Google Fonts: Poppins and Open Sans (https://fonts.google.com).
+- Unsplash: Placeholder images (https://unsplash.com).
+- W3C WCAG: Accessibility guidelines (https://www.w3.org/WAI/standards-guidelines/wcag/).
+- Assignment Brief: The Independent Institute of Education (2025).
+
