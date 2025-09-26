@@ -1,46 +1,134 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
+<html lang="en">
 <head>
-
-<title>NGO FOR PETS IN NEED - Tail to heart</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Tail to Heart</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
 </head>
-
 <body>
-<h1>OUR NGO FOR PETS IN NEED</h1>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Tail to Heart</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutUs.html">About Us</a></li>
+                <li><a href="adopt.html">Adopt</a></li>
+                <li><a href="foster.html">Foster</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="donation.html">Donate</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<h2>TAIL TO HEART</h2>
-<nav>
+    <main>
+        <section class="hero">
+            <h1>Support Our Mission</h1>
+            <p>Your donation helps us rescue, rehabilitate, and rehome animals in need</p>
+        </section>
 
-<a href="index.html">Home</a>
+        <section class="section">
+            <h2>Where Your Donation Goes</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Medical Care</h3>
+                    <p>Vaccinations, spay/neuter surgeries, and emergency treatments</p>
+                </div>
+                <div class="card">
+                    <h3>Food & Shelter</h3>
+                    <p>Quality food, comfortable bedding, and safe housing</p>
+                </div>
+                <div class="card">
+                    <h3>Community Programs</h3>
+                    <p>Education, low-cost services, and outreach initiatives</p>
+                </div>
+            </div>
+        </section>
 
-<a href="aboutUs.html">About</a>
+        <section class="section">
+            <h2>Make a Donation</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>R250</h3>
+                    <p>Provides vaccinations for one animal</p>
+                    <button class="cta-button">Donate R250</button>
+                </div>
+                <div class="card">
+                    <h3>R500</h3>
+                    <p>Feeds a pet for one month</p>
+                    <button class="cta-button">Donate R500</button>
+                </div>
+                <div class="card">
+                    <h3>R1000</h3>
+                    <p>Covers spay/neuter surgery</p>
+                    <button class="cta-button">Donate R1000</button>
+                </div>
+                <div class="card">
+                    <h3>Custom Amount</h3>
+                    <p>Any amount makes a difference</p>
+                    <button class="cta-button">Custom Donation</button>
+                </div>
+            </div>
+        </section>
 
-<a href="adopt.html">Adopt</a>
+        <section class="section">
+            <h2>Recurring Donations</h2>
+            <p>Become a monthly supporter and provide consistent help to animals in need</p>
+            <div class="cards">
+                <div class="card">
+                    <h3>Monthly Supporter</h3>
+                    <p>Recurring monthly donation of your choice</p>
+                    <button class="cta-button">Set Up Monthly</button>
+                </div>
+            </div>
+        </section>
 
-<a href="foster.html">Foster</a>
-<a href="resources.html">Resource</a>
-<a href="contact.html">Contact</a>
-<a href="donation.html">Donate</a>
+        <section class="section">
+            <h2>Other Ways to Give</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Corporate Sponsorship</h3>
+                    <p>Business partnerships and sponsorship opportunities</p>
+                </div>
+                <div class="card">
+                    <h3>In-Kind Donations</h3>
+                    <p>Food, supplies, and equipment donations</p>
+                </div>
+                <div class="card">
+                    <h3>Legacy Giving</h3>
+                    <p>Include Tail to Heart in your estate planning</p>
+                </div>
+            </div>
+        </section>
 
-</nav>
-<br>
-<h3>If you would like to donate . please fill in these forms below</h3>
+        <section class="section">
+            <h2>Donation Form</h2>
+            <form>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <select required>
+                    <option value="">Select Donation Type</option>
+                    <option value="one-time">One-time Donation</option>
+                    <option value="monthly">Monthly Donation</option>
+                </select>
+                <select required>
+                    <option value="">Select Amount</option>
+                    <option value="250">R250</option>
+                    <option value="500">R500</option>
+                    <option value="1000">R1000</option>
+                    <option value="custom">Custom Amount</option>
+                </select>
+                <input type="number" placeholder="Custom Amount (if selected)" min="1">
+                <button type="submit">Donate Now</button>
+            </form>
+        </section>
+    </main>
 
-<form action="#" method="post">
-
-<label for="name">Name:</label><br>
-<input type="text" id="name" name="name" required><br>
-
-<label for="email">Email:</label><br>
-
-<input type="email" id="email" name="email" required><br>
-
-<label for="donation amount">dontation amount:</label><br>
-
-<input type="number" id="donation amount" name="Donation" required><br>
-
-<label for="message">Message: </label><br>
-
-<textarea id="message" name="message" rows="2" cols="50" required></textarea><br>
-
-<input type="submit" value="Submit">
+    <footer>
+        <p>&copy; 2025 Tail to Heart. All rights reserved. | www.tailtoheart.org</p>
+    </footer>
+</body>
+</html>
+>>>>>>> REPLACE
