@@ -68,6 +68,11 @@ Marketing & Social Media Integration	R10 000
 Maintenance & Technical Support	R10 000
 
 
+
+<img width="1892" height="1031" alt="Screenshot 2025-09-26 130915" src="https://github.com/user-attachments/assets/8bb2e0c1-3b36-4890-b9f0-04a586addfac" />
+<img width="856" height="988" alt="Screenshot 2025-09-26 131036" src="https://github.com/user-attachments/assets/d6de4da3-5a4c-4f60-bdd9-b2e1308cc443" />
+<img width="805" height="848" alt="Screenshot 2025-09-26 132903" src="https://github.com/user-attachments/assets/2d361a0c-058d-4fa2-875d-17574e393fb3" />
+
 References
 - MDN Web Docs: CSS Flexbox (https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout), Media Queries (https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries).
 - Google Fonts: Poppins and Open Sans (https://fonts.google.com).
