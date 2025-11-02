@@ -79,5 +79,11 @@ References
 - Google Fonts: Poppins and Open Sans (https://fonts.google.com).
 - Unsplash: Placeholder images (https://unsplash.com).
 - W3C WCAG: Accessibility guidelines (https://www.w3.org/WAI/standards-guidelines/wcag/).
-- Assignment Brief: The Independent Institute of Education (2025).
-
+- Chris Coyier (2023) CSS-Tricks: tips, tricks, and techniques on using CSS. [Online]. Available at: https://css-tricks.com/ [Accessed: 15 October 2023].
+- Google (2023) Google Fonts: a library of free licensed font families. [Online]. Available at: https://fonts.google.com/ [Accessed: 15 October 2023].
+- jQuery Foundation (2023) jQuery: a fast, small, and feature-rich JavaScript library. [Online]. Available at: https://jquery.com/ [Accessed: 15 October 2023].
+- Leaflet (2023) Leaflet: an open-source JavaScript library for mobile-friendly interactive maps. [Online]. Available at: https://leafletjs.com/ [Accessed: 15 October 2023].
+- Mozilla (2023) MDN Web Docs: resources for developers, by developers. [Online]. Available at: https://developer.mozilla.org/ [Accessed: 15 October 2023].
+- OpenStreetMap Foundation (2023) OpenStreetMap: a map of the world, created by people like you. [Online]. Available at: https://www.openstreetmap.org/ [Accessed: 15 October 2023].
+- Refsnes Data (2023) W3Schools Online Web Tutorials. [Online]. Available at: https://www.w3schools.com/ [Accessed: 15 October 2023].
+- Unsplash Inc. (2023) Unsplash: the internet’s source of freely-usable images. [Online]. Available at: https://unsplash.com/ [Accessed: 15 October 2023].
