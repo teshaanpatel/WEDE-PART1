@@ -5,6 +5,24 @@ Part 2: Responsive Design
 - Tested via DevTools (emulated iPhone/iPad/Desktop); iterated on nav wrapping for mobile.
 
 
+<<<<<<< HEAD
+part 3 - final PoE
+
+- Integrated an interactive Leaflet map on Contact page centered on Cape Town, South Africa.
+- Added interactive elements (accordions, tabs, modal dialog).
+- Implemented simple lightbox gallery for image viewing.
+- Added Leaflet interactive map integration (initialised if #map exists).
+- Implemented dynamic content loading for events/posts and a client-side search filter.
+- Added form validation and AJAX submission simulation for enquiry.html and contact.html.
+- Replaced local image sources with remote placeholder images (picsum.photos) and added descriptive alt text.
+- Added responsive CSS and reveal-on-scroll animations.
+- Injected SEO meta tags (title, description, keywords) into HTML pages.
+- Created robots.txt and sitemap.xml.
+- Created README.md and this CHANGELOG entry.
+- updated buttons that work now
+- updated colour scheme 
+- pictures added
+=======
 
  Initial Setup - Part 1: HTML Structure
 -  Fixed `<nav>` (unordered list with 7 links: Home, About Us, Adopt, Foster, Resources, Contact, Donate), `<main>` (hero/section/article for content), and `<footer>` . Used `<header>` for logo and `<section>` for modular content
@@ -57,3 +75,4 @@ Part 2: Responsive Design Enhancements and Breakpoints (3.1)
 - Resolved Git issues: "Access rights" error fixed by generating GitHub PAT (Settings > Developer > Tokens classic, repo scope, 90-day expiration); unset old credentials (`git config --global --unset credential.helper`); verified remote (`git remote -v` shows HTTPS URL); future pushes use username + PAT (stored via `git config --global credential.helper store`).
 
 - Accessibility polish: Added focus styles (`:focus { outline: 2px solid #87CEEB; outline-offset: 2px
+>>>>>>> e323184ddc509f32b3b552c3d6283c418f171d24
