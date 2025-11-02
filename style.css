@@ -1,169 +1,367 @@
-/* Navigation: Fixed Top Bar (Responsive for Mobile/Tablet/Desktop) */
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #2c3e50; /* Deep charcoal for strong text contrast */
+    background: linear-gradient(135deg, #e3f2fd 0%, #fce4ec 100%); /* Soft blue-to-pink gradient background for subtle bounce */
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #3e2723; /* Rich brown for headings to contrast with bright accents */
+}
+
+/* Navigation */
 nav {
-    background-color: #8FBC8F; /* Sage green */
-    padding: 0.75rem 0; /* Reduced base padding for mobile fit */
-    position: fixed;
+    background: linear-gradient(90deg, #00BCD4 0%, #FF5722 50%, #9C27B0 100%); /* Teal-to-coral-to-purple gradient for dynamic bounce */
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
     top: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    min-height: 60px; /* Ensures touch-friendly height on mobile (min 44px recommended) */
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    animation: colorShift 5s infinite alternate; /* Subtle color animation for modern flair */
+}
+
+@keyframes colorShift {
+    0% { background: linear-gradient(90deg, #00BCD4 0%, #FF5722 50%, #9C27B0 100%); }
+    100% { background: linear-gradient(90deg, #9C27B0 0%, #00BCD4 50%, #FF5722 100%); }
 }
 
 .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem; /* Side padding for edges */
-    flex-wrap: wrap; /* Allows logo/links to wrap on very small screens */
-    gap: 1rem; /* Small gap between logo and links if wrapped */
+    padding: 0 20px;
 }
 
 .logo {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.25rem; /* Slightly smaller base for mobile */
+    font-size: 1.5rem;
     font-weight: 700;
-    color: #F5F5DC; /* Beige text */
-    flex-shrink: 0; /* Prevents logo from shrinking too much */
-    white-space: nowrap; /* Keeps "Tail to Heart" on one line */
+    color: #FFC107; /* Bright yellow for logo pop */
 }
 
 .nav-links {
-    display: flex;
     list-style: none;
-    gap: 1rem; /* Base gap: Smaller for mobile fit */
-    margin: 0;
-    padding: 0;
-    flex-wrap: wrap; /* Links wrap to new line on small screens */
-    justify-content: flex-end; /* Aligns right, even if wrapped */
+    display: flex;
+    gap: 20px;
 }
 
-.nav-links li {
-    flex-shrink: 1; /* Allows links to shrink slightly if needed */
-}
-
-.nav-links li a {
-    color: #F5F5DC;
-    font-weight: 500;
-    padding: 0.5rem 0.75rem; /* Compact padding for mobile */
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-    font-size: 0.95rem; /* Base font: Scales down on mobile */
-    white-space: nowrap; /* Prevents link text from wrapping mid-word */
+.nav-links a {
+    color: white;
     text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s, text-shadow 0.3s;
 }
 
-.nav-links li a:hover,
-.nav-links li a:focus {
-    background-color: #FF7F50; /* Coral highlight */
-    outline: 2px solid #87CEEB; /* Focus for accessibility */
+.nav-links a:hover {
+    color: #FFC107; /* Yellow bounce on hover */
+    text-shadow: 0 0 8px rgba(255, 193, 7, 0.8);
 }
 
-/* Mobile Enhancements: <768px (Phone) - Ensure Fit and Wrapping */
-@media (max-width: 767px) {
-    nav {
-        padding: 0.5rem 0; /* Even tighter padding */
-        min-height: 50px; /* Compact but touchable */
-    }
-    
-    .nav-container {
-        padding: 0 0.75rem; /* Less side padding on phones */
-        flex-direction: column; /* Stack logo above links if extremely narrow (e.g., <320px) */
-        gap: 0.5rem;
-    }
-    
-    .logo {
-        font-size: 1.1rem; /* Shrink logo for space */
-        text-align: center; /* Center if stacked */
-        width: 100%; /* Full width when stacked */
-    }
-    
-    .nav-links {
-        gap: 0.5rem; /* Minimal gaps - links fit tighter */
-        width: 100%; /* Full width for wrapping */
-        justify-content: center; /* Center links when wrapped */
-    }
-    
-    .nav-links li a {
-        font-size: 0.9rem; /* Smaller text for phone */
-        padding: 0.4rem 0.6rem; /* Smaller touch targets but still usable (~40px) */
-    }
-    
-    /* Hide overflow if any wrapping causes issues */
-    body {
-        overflow-x: hidden; /* Prevents horizontal scroll from nav */
-    }
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #FF5722 0%, #00BCD4 50%, #9C27B0 100%); /* Coral-teal-purple gradient for energetic bounce */
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+    background-image: url('path/to/hero-image.jpg'); /* Optional: Overlay with a subtle animal-themed image */
+    background-size: cover;
+    background-position: center;
+    position: relative;
 }
 
-/* Tablet Enhancements: 768px+ (Fits in One Line) */
-@media (min-width: 768px) {
-    nav {
-        padding: 1rem 0; /* Standard padding */
-        min-height: 70px;
-    }
-    
-    .nav-container {
-        flex-direction: row; /* Ensure horizontal layout */
-        flex-wrap: nowrap; /* No wrapping on tablet+ */
-        gap: 0;
-        padding: 0 1.5rem;
-    }
-    
-    .logo {
-        font-size: 1.5rem; /* Full size */
-        width: auto;
-        text-align: left;
-    }
-    
-    .nav-links {
-        gap: 1.5rem; /* Comfortable spacing */
-        width: auto;
-        justify-content: flex-end;
-    }
-    
-    .nav-links li a {
-        font-size: 1rem; /* Standard text */
-        padding: 0.5rem 1rem;
-    }
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1); /* Light overlay for text readability */
 }
 
-/* Desktop: No Changes Needed (Already Fits) */
-@media (min-width: 1024px) {
-    .nav-container {
-        padding: 0 2rem; /* Wider for large screens */
-    }
-    
-    .nav-links {
-        gap: 2rem;
-    }
-    
-    .nav-links li a {
-        padding: 0.5rem 1.25rem;
-    }
+.hero h1, .hero p {
+    position: relative;
+    z-index: 1;
 }
 
-/* Main Content Adjustment: Always Account for Fixed Nav */
-main {
-    margin-top: 80px; /* Base: Covers nav height (adjust if nav changes) */
-    padding: 2rem 1rem;
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #b282ff; /* Soft yellow for subtle contrast */
+}
+
+/* Sections */
+.section {
+    padding: 3rem 2rem;
     max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white for bounce against gradient body */
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive Main Padding for Small Screens */
-@media (max-width: 767px) {
-    main {
-        margin-top: 70px; /* Slightly less for compact mobile nav */
-        padding: 1.5rem 0.75rem; /* Tighter for phone fit */
+.section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #FF5722; /* Coral for section headers to bounce with teal accents */
+    text-shadow: 1px 1px 2px rgba(255, 87, 34, 0.3);
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.card {
+    background: linear-gradient(135deg, #00BCD4 0%, #FFC107 100%); /* Teal-to-yellow gradient for card bounce */
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+    text-align: center;
+    flex: 1 1 300px;
+    max-width: 350px;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    color: white;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #FFC107 0%, #00BCD4 100%); /* Reverse gradient on hover for bounce */
+}
+
+.card h3 {
+    color: #9C27B0; /* Purple for card titles to contrast with gradient */
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+/* Forms */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #f3e5f5; /* Light purple background for form bounce */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+input, select, textarea {
+    padding: 0.75rem;
+    border: 2px solid #00BCD4; /* Teal border for input bounce */
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: white;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #FF5722; /* Coral focus for contrast */
+    box-shadow: 0 0 8px rgba(255, 87, 34, 0.3);
+    outline: none;
+}
+
+button {
+    background: linear-gradient(90deg, #9C27B0 0%, #FF5722 100%); /* Purple-to-coral gradient button */
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: linear-gradient(90deg, #FF5722 0%, #9C27B0 100%); /* Reverse gradient on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Map Section */
+#map {
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    margin-top: 1rem;
+    border: 3px solid #451849; /* Yellow border for map bounce */
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(90deg, #00BCD4 0%, #9C27B0 100%); /* Teal-to-purple gradient */
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    background: linear-gradient(90deg, #9C27B0 0%, #00BCD4 100%); /* Reverse for hover bounce */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #3e2723 0%, #FF5722 100%); /* Brown-to-coral gradient for footer bounce */
+    color: #FFE082; /* Soft yellow text for contrast */
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Search Bar */
+#site-search {
+    border: 2px solid #00BCD4; /* Teal border */
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #e8f5e8; /* Light green background for bounce */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#site-search:focus {
+    border-color: #FF5722; /* Coral focus */
+    box-shadow: 0 0 8px rgba(255, 87, 34, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero {
+        padding: 2rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+    #map {
+        height: 300px; /* Smaller height on mobile */
+    }
+
+    .section {
+        padding: 2rem 1rem;
     }
 }
 
-@media (min-width: 768px) {
-    main {
-        margin-top: 90px; /* More for taller tablet nav */
-        padding: 3rem 2rem;
+/* Resources Grid */
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.resource-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #FFFFFF;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #4CAF50;
+}
+
+.resource-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.resource-content {
+    flex: 1;
+}
+
+/* Adoption Grid */
+.adopt-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.adopt-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #FFFFFF;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #4CAF50;
+}
+
+.adopt-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.adopt-content {
+    flex: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .resource-item, .adopt-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    .resource-image, .adopt-image {
+        width: 100px;
+        height: 100px;
     }
 }

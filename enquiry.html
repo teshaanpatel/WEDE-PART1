@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Enquiry - Community Site</title>
+</head>
+<body>
+<div class="container">
+  <h1>Enquiry</h1>
+  <form action="#" method="post" data-ajax="true">
+    <label for="name">Full name</label><br>
+    <input id="name" name="name" required><br>
+    <label for="email">Email</label><br>
+    <input id="email" type="email" name="email" required><br>
+    <label for="phone">Phone</label><br>
+    <input id="phone" name="phone" pattern='[0-9\-\+\s]{7,15}' required><br>
+    <label for="type">Type</label><br>
+    <select id="type" name="type"><option>General</option><option>Volunteer</option><option>Sponsor</option></select><br>
+    <label for="message">Message</label><br>
+    <textarea id="message" name="message" rows="5" required></textarea><br>
+    <div class="form-status"></div>
+    <button type="submit">Send</button>
+  </form>
+</div>
+</body>
+</html>
