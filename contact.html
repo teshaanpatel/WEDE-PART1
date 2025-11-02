@@ -6,8 +6,19 @@
     <title>Contact Us - Tail to Heart</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Community-focused website with events, contact and enquiry forms, interactive map, and gallery.">
+    <meta name="keywords" content="community, events, volunteers, workshops, charity, non-profit">
+
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="/assets/js/main.js"></script>
 </head>
 <body>
+<div class='container'><input id='site-search' placeholder='Search site content...' style='width:100%;padding:8px;margin:12px 0;'></div>
     <nav>
         <div class="nav-container">
             <div class="logo">Tail to Heart</div>
@@ -57,7 +68,7 @@
 
         <section class="section">
             <h2>Send Us a Message</h2>
-            <form>
+            <form data-ajax="true">
                 <input type="text" placeholder="Your Name" required>
                 <input type="email" placeholder="Your Email" required>
                 <input type="tel" placeholder="Your Phone Number">
@@ -75,6 +86,11 @@
         </section>
 
         <section class="section">
+            <h2>Find Us</h2>
+            <div id="map" style="height: 400px;"></div>
+        </section>
+
+        <section class="section">
             <h2>Volunteer Opportunities</h2>
             <p>We're always looking for dedicated volunteers to help with animal care, events, and administration.</p>
             <a href="#contact-form" class="cta-button">Apply to Volunteer</a>
@@ -84,6 +100,22 @@
     <footer>
         <p>&copy; 2025 Tail to Heart. All rights reserved. | www.tailtoheart.org</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize the map
+            var map = L.map('map').setView([-33.9249, 18.4241], 13); // Coordinates for Cape Town
+
+            // Add OpenStreetMap tiles
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            // Add a marker with popup
+            L.marker([-33.9249, 18.4241]).addTo(map)
+                .bindPopup('Tail to Heart<br>123 Rescue Road<br>Animal Haven, Cape Town<br>8001')
+                .openPopup();
+        });
+    </script>
 </body>
 </html>
->>>>>>> REPLACE
